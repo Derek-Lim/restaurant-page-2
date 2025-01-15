@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+body {
+  background: url('./643.png');
+  background-size: 1200px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #ffde73;
+  gap: 20px;
+}
+
+nav > button {
+  background-color: #ffde73;
+  font-size: 15px;
+  width: 100px;
+  height: 45px;
+  margin-top: 5px;
+  border: 1px solid black;
+  border-bottom-style: none;
+  border-radius: 5px 5px 0 0;
+  background-color: rgb(236, 164, 59)
+}
+
+#content {
+  background-color: #ffde73;
+  margin: 50px 150px 100px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.container {
+  border: 15px solid #c16a08;
+  background-color: #FFC60B;
+  padding: 20px;
+}
+
+.heading {
+  margin: 0 80px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.review-container, .hours {
+  line-height: 1.5;
+}
+
+.review-container > .customer {
+  margin: 20px 0 0 40px;
+  font-size: 20px;
+}
+
+.hours-container > h3 {
+  font-size: 25px;
+  margin: 0 0 10px 40px;
+}
+
+.hours-container > .hours {
+  text-align: center;
+}
+
+.location-container > h3 {
+  font-size: 25px;
+  margin: 0 0 5px 40px;
+}
+
+.location-container > p {
+  text-align: center;
+}
