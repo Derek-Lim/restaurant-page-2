@@ -1,5 +1,6 @@
 export default function menuPage() {
-  const content = document.getElementById('content')
+  const content = document.createElement('div')
+  content.setAttribute('id', 'content')
 
   // Heading
   const heading = document.createElement('h1')

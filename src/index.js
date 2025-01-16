@@ -1,30 +1,31 @@
 import "./styles.css"
 import homePage from './home.js'
 import menuPage from "./menu.js"
+import contactPage from "./contact.js"
 
 const homeBtn = document.getElementById('home')
 const menuBtn = document.getElementById('menu')
 const contactBtn = document.getElementById('contact')
 
-function displayHomePage() {
-  document.getElementById('content').innerHTML = ''
-  document.getElementById('home').classList.add('selected')
-  document.getElementById('menu').classList.remove('selected')
-  document.getElementById('contact').classList.remove('selected')
-
-  document.body.append(homePage())
+function displayPage(pageFunction, btnClass) {
+  removeContent()
+  updateSelectedBtnClass(btnClass)
+  document.body.appendChild(pageFunction())
 }
 
-function displayMenuPage() {
-  document.getElementById('content').innerHTML = ''
-  document.getElementById('menu').classList.add('selected')
-  document.getElementById('home').classList.remove('selected')
-  document.getElementById('contact').classList.remove('selected')
-
-  document.body.append(menuPage())
+function removeContent() {
+  const content = document.getElementById('content')
+  if (content) content.remove()
 }
 
-displayHomePage()
+function updateSelectedBtnClass(btnClass) {
+  const nav = document.querySelector('nav')
+  Array.from(nav.children).forEach(child => child.classList.remove('selected'))
+  document.getElementById(btnClass).classList.add('selected')
+}
 
-homeBtn.addEventListener('click', displayHomePage)
-menuBtn.addEventListener('click', displayMenuPage)
+displayPage(homePage, 'home')
+
+homeBtn.addEventListener('click', () => displayPage(homePage, 'home'))
+menuBtn.addEventListener('click', () => displayPage(menuPage, 'menu'))
+contactBtn.addEventListener('click', () => displayPage(contactPage, 'contact'))

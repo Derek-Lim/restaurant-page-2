@@ -1,5 +1,6 @@
 export default function homePage() {
-  const content = document.getElementById('content')
+  const content = document.createElement('div')
+  content.setAttribute('id', 'content')
 
   // Restaurant name
   const heading = document.createElement('h1')
