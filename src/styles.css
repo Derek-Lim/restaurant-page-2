@@ -26,6 +26,9 @@ nav > button {
   border: 1px solid black;
   border-bottom-style: none;
   border-radius: 5px 5px 0 0;
+}
+
+nav > .selected {
   background-color: rgb(236, 164, 59)
 }
 
@@ -43,6 +46,21 @@ nav > button {
   border: 15px solid #c16a08;
   background-color: #FFC60B;
   padding: 20px;
+}
+
+.container > h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.container > .description {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.container > .price {
+  font-size: 20px;
+  margin-left: 30px;
 }
 
 .heading {
